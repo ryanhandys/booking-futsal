@@ -24,9 +24,9 @@ return new class extends Migration
             $table->string('fraud_status')->nullable();
             $table->text('pdf_url')->nullable();
             $table->string('status_pembayaran')->nullable();
-            $table->foreignId('pemesanan_id');
+            $table->string('pemesanan_id');
             $table->text('transaction_id');
-            $table->dateTime('batas_pembayaran');
+            $table->dateTime('batas_pembayaran')->nullable();
             $table->timestamps();
         });
     }

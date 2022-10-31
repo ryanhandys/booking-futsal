@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class MidtransController extends Controller
 {
-    public static function midtrans($user, $price)
+    public static function midtrans($order_id, $user, $price)
     {
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = env('MIDTRANS_SERVER_KEY');
@@ -22,7 +22,7 @@ class MidtransController extends Controller
 
         $params = array(
             'transaction_details' => array(
-                'order_id' => rand(),
+                'order_id' => $order_id,
                 'gross_amount' => $price,
             ),
             'customer_details' => array(

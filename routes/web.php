@@ -7,6 +7,7 @@ use App\Http\Controllers\JadwalController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PesananController;
+use App\Http\Controllers\RiwayatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::get('/cara-booking', function () {
 Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal');
 
 Route::get('/bayar/{token}', [PesananController::class, 'bayar'])->name('bayar');
+Route::post('/bayar/{token}', [PesananController::class, 'simpan']);
 
 Route::get('/jadwal/tgl', [JadwalController::class, 'data'])->name('tgl.jadwal');
 
@@ -60,9 +62,7 @@ Route::group(['middleware' => ['auth','level']], function(){
 
 });
 
-Route::get('/riwayat-pembayaran', function () {
-    return view('riwayat-pembayaran');
-})->name('riwayat-pembayaran');
+Route::get('/riwayat-pembayaran', [RiwayatController::class, 'index'])->name('riwayat-pembayaran');
 
 Route::group(['middleware' => ['auth']], function(){
     Route::post('/pesan', [PesananController::class, 'store'])->name('pesan.store');
