@@ -62,9 +62,9 @@ Route::group(['middleware' => ['auth','level']], function(){
 
 });
 
-Route::get('/riwayat-pembayaran', [RiwayatController::class, 'index'])->name('riwayat-pembayaran');
 
 Route::group(['middleware' => ['auth']], function(){
+    Route::get('/riwayat-pembayaran', [RiwayatController::class, 'index'])->name('riwayat-pembayaran');
     Route::post('/pesan', [PesananController::class, 'store'])->name('pesan.store');
 });
 
