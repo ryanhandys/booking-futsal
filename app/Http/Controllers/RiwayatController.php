@@ -12,6 +12,10 @@ class RiwayatController extends Controller
     {
         $pesanan = Pemesanan::where('user_id', auth()->user()->id)->groupBy('order_id')->get(['order_id']);
         
+        if(empty($transaksi)){
+            return view('riwayat-pembayaran');
+        }
+
         foreach($pesanan as $item){
             $trans = Transaksi::where('pemesanan_id', $item->order_id)->first();
             if(!empty($trans)){
