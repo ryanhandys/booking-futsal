@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class MidtransController extends Controller
@@ -30,6 +31,11 @@ class MidtransController extends Controller
                 'email' => $user->email,
                 'phone' => $user->phone,
             ),
+            'expiry' => array(
+                'start_time'  => Carbon::now()->format('Y-m-d H:i:s')." +0700",
+                'unit' => 'minutes',
+                'duration' => 30
+            )
         );
          
         $snapToken = \Midtrans\Snap::getSnapToken($params);

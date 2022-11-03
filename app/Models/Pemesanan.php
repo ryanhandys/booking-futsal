@@ -15,4 +15,9 @@ class Pemesanan extends Model
     {
         return $this->belongsTo(Jam::class, 'jam_id', 'id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

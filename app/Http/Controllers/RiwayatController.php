@@ -23,6 +23,8 @@ class RiwayatController extends Controller
             }
         }
 
+        // return $transaksi;
+
         return view('riwayat-pembayaran', compact('transaksi'));
     }
 }

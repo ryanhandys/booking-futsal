@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminPesananController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JamController;
 use App\Http\Controllers\Admin\LapanganController;
@@ -56,9 +57,7 @@ Route::group(['middleware' => ['auth','level']], function(){
 
     Route::get('/lapangan/tambah', [LapanganController::class, 'create'])->name('lapangan.tambah');
 
-    Route::get('/pesanan', function() {
-        return view('admin.pesanan');
-    })->name('pesanan');
+    Route::get('/pesanan', [AdminPesananController::class, 'index'])->name('pesanan');
 
 });
 

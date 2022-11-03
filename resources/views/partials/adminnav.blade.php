@@ -15,7 +15,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('dashboard') }}" class="nav-link">
                 <i class="nav-icon fas fa-home"></i>
                 <p>
                     Beranda
@@ -31,11 +31,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('pesanan') }}" class="nav-link">
                 <i class="nav-icon fas fa-tasks"></i>
                 <p>
                     Pesanan
-                    <span class="right badge badge-danger">3</span>
                 </p>
             </a>
           </li>

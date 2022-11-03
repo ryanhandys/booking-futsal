@@ -11,27 +11,27 @@
         @foreach ($transaksi as $item)            
         <article class="kartu fl-left" style="background-color: rgb(236, 240, 3)" >
             <section class="date">
-              <time datetime="23th feb">
-                <span>23</span><span>feb</span>
+              <time>
+                <span>{{ Carbon\Carbon::parse($item->pemesanan->tanggal)->format('d') }}</span><span>{{ Carbon\Carbon::parse($item->pemesanan->tanggal)->format('M') }}</span>
               </time>
             </section>
             <section class="kartu-cont">
-              <small>dj khaled</small>
-              <h3>live in sydney</h3>
+              <small>{{ $item->pemesanan_id }}</small>
+              <h3>{{ $item->pemesanan->user->nama }}</h3>
               <div class="even-date">
                <i class="fa fa-calendar"></i>
                <time>
-                 <span>wednesday 28 december 2014</span>
+                 <span>{{ Carbon\Carbon::parse($item->waktu_transaksi)->format('d M Y') }}</span>
                  <span>08:55pm to 12:00 am</span>
                </time>
               </div>
               <div class="even-info">
                 <i class="fa fa-map-marker"></i>
                 <p>
-                  nexen square for people australia, sydney
+                  Rp{{ number_format($item->biaya, 0, 0, '.') }}
                 </p>
               </div>
-              <a href="#">tickets</a>
+              <a href="#">{{ $item->status_transaksi }}</a>
             </section>
         </article>
         @endforeach
