@@ -58,6 +58,7 @@ Route::group(['middleware' => ['auth','level']], function(){
     Route::get('/lapangan/tambah', [LapanganController::class, 'create'])->name('lapangan.tambah');
 
     Route::get('/pesanan', [AdminPesananController::class, 'index'])->name('pesanan');
+    Route::get('/pesanan/data', [AdminPesananController::class, 'data'])->name('pesanan.data');
 
 });
 
