@@ -7,7 +7,7 @@
 <section class="container">
     <h1>Riwayat Pembayaran</h1>
       <div class="row">
-        @if (empty($transaksi))
+        @if (isset($transaksi))
         @foreach ($transaksi as $item)            
         <article class="col-6 kartu fl-left" style="background-color: rgb(236, 240, 3)" >
           <section class="date">
