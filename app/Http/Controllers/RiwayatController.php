@@ -11,6 +11,8 @@ class RiwayatController extends Controller
     public function index()
     {
         $pesanan = Pemesanan::where('user_id', auth()->user()->id)->groupBy('order_id')->get(['order_id']);
+
+        $transaksi = array();
         
         if(empty($pesanan)){
             return view('riwayat-pembayaran');
