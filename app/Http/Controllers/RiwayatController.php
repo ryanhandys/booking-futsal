@@ -21,7 +21,7 @@ class RiwayatController extends Controller
         foreach($pesanan as $item){
             $trans = Transaksi::where('pemesanan_id', $item->order_id)->first();
             if(!empty($trans)){
-                $transaksi[] = $trans;
+                $transaksi = $trans;
             }
         }
 
