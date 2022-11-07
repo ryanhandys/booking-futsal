@@ -113,7 +113,7 @@
                    {
                         data: "harga",
                         render: function(data){
-                            return formatRupiah(""+data)
+                            return "Rp"+formatRupiah(""+data)
                         }
                     }
                ],
@@ -122,7 +122,7 @@
                     for(var i = 0; i < data.length; i++){
                         tot += data[i].harga;
                     }
-                    $('#total').html(formatRupiah(""+tot, ))
+                    $('#total').html("Rp"+formatRupiah(""+tot, ))
                 }                
            });
        }
