@@ -120,9 +120,9 @@
                "footerCallback": function(row, data){
                 var tot = 0;
                     for(var i = 0; i < data.length; i++){
-                        tot += data[i].harga;
+                        tot += Number.parseInt(data[i].harga);
                     }
-                    $('#total').html("Rp"+formatRupiah(""+tot, ))
+                    $('#total').html("Rp"+formatRupiah(""+tot, ));
                 }                
            });
        }
