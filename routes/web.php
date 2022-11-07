@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminPesananController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\JamController;
 use App\Http\Controllers\Admin\LapanganController;
+use App\Http\Controllers\Admin\LaporanController;
 use App\Http\Controllers\JadwalController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,8 @@ Route::get('/cara-booking', function () {
     return view('cara-booking');
 })->name('cara-booking');
 
+Route::get('nota/{id}', [PesananController::class, 'nota'])->name('nota');
+
 Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal');
 
 Route::get('/bayar/{token}', [PesananController::class, 'bayar'])->name('bayar');
@@ -53,12 +56,17 @@ Route::group(['middleware' => ['auth','level']], function(){
         Route::get('/hapus/{id}', [JamController::class, 'delete'])->name('jam.hapus');
     });
 
+    Route::post('kode', [AdminPesananController::class, 'kode'])->name('kode');
+
     Route::get('/lapangan', [LapanganController::class, 'index'])->name('lapangan');
 
     Route::get('/lapangan/tambah', [LapanganController::class, 'create'])->name('lapangan.tambah');
 
     Route::get('/pesanan', [AdminPesananController::class, 'index'])->name('pesanan');
     Route::get('/pesanan/data', [AdminPesananController::class, 'data'])->name('pesanan.data');
+
+    Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
+    Route::get('/laporan/data', [LaporanController::class, 'data'])->name('laporan.data');
 
 });
 

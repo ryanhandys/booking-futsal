@@ -78,6 +78,13 @@ class PesananController extends Controller
         $transaksi->pemesanan_id = $json->order_id;
         $transaksi->save();
 
-        return 'sukses';
+        return redirect('nota/'.$transaksi->transaction_id);
+    }
+
+    public function nota($id)
+    {
+        $transaksi = Transaksi::where('transaction_id', $id)->first();
+
+        return view('nota', compact('transaksi'));
     }
 }
