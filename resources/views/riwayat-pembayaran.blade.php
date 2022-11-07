@@ -9,7 +9,7 @@
       <div class="row">
         @if (isset($transaksi))
         @foreach ($transaksi as $item)            
-        <article class="col-6 kartu fl-left" style="background-color: rgb(236, 240, 3)" >
+        <article class="col-5 m-2" style="background-color: rgb(236, 240, 3)" >
           <section class="date">
             <time>
               <span>{{ Carbon\Carbon::parse($item->pemesanan->tanggal)->format('d') }}</span><span>{{ Carbon\Carbon::parse($item->pemesanan->tanggal)->format('M') }}</span>
