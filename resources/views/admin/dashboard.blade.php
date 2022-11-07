@@ -17,7 +17,7 @@
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
                 </div>
-                <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
           <!-- ./col -->
@@ -25,7 +25,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>12<sup style="font-size: 20px"></sup></h3>
+                <h3>{{ $transaksi }}<sup style="font-size: 20px"></sup></h3>
 
                 <p>Transaksi</p>
               </div>
@@ -40,7 +40,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                 <h3> 10</h3>
+                 <h3>{{ $pesanan }}</h3>
 
                 <p></p>Pesanan</p>
               </div>
@@ -53,16 +53,6 @@
           <!-- ./col -->
         </div>
         <!-- /.row -->
-
-        <!-- Main row -->
-        <div class="row">
-          <!-- Left col -->
-          <section class="col-lg-7 connectedSortable">
-           
-          
-          </section>
-          <!-- right col -->
-        </div>
 
         <!-- /.row (main row) -->
       </div>

@@ -16,11 +16,17 @@ class LaporanController extends Controller
         return view('admin.laporan');
     }   
 
-    public function data()
+    public function data(Request $request)
     {
-        $data = Transaksi::where('status_transaksi', 'settlement')
-                ->whereMonth('waktu_transaksi', Carbon::now()->month)
-                ->get();
+        if ($request->bulan != 'null'){
+            $data = Transaksi::where('status_transaksi', 'settlement')
+                    ->whereMonth('waktu_transaksi', $request->bulan)
+                    ->get();
+        } else {
+            $data = Transaksi::where('status_transaksi', 'settlement')
+                    ->whereMonth('waktu_transaksi', Carbon::now()->month)
+                    ->get();
+        }
 
         $result =  DataTables::of($data)
                 ->addIndexColumn()

@@ -2,6 +2,29 @@
 
 @section('content')
 <div class="container-fluid">
+    <div class="d-flex mb-2">
+        <div class="col-4">
+            <label for="bulan" class="form-label">Bulan</label>
+            <select class="form-select form-select-lg mb-3" name="bulan">
+                <option disabled selected>Bulan</option>
+                <option value="1">Januari</option>
+                <option value="2">Februari</option>
+                <option value="3">Maret</option>
+                <option value="4">April</option>
+                <option value="5">Mei</option>
+                <option value="6">Juni</option>
+                <option value="7">Juli</option>
+                <option value="8">Agustus</option>
+                <option value="9">September</option>
+                <option value="10">Oktober</option>
+                <option value="11">November</option>
+                <option value="12">Desember</option>
+            </select>
+        </div>
+        <div class="col-8 text-right">
+            <button type="button"onclick="cetak()" class="btn btn-primary">Cetak</button>
+        </div>
+    </div>
     <div id="viewTable">
         <table class="table table-striped w-100" id="pesanan">
             <thead>
@@ -32,6 +55,10 @@
     
 <script>
     $(document).ready( function () {
+
+        $('select[name=bulan]').change(function(){
+            dataTables($('select[name=bulan]').val());
+        })
 
        dataTables();
 
@@ -72,7 +99,7 @@
                "order": [
                    [0, 'asc']
                ],
-               ajax: "{{ route('laporan.data') }}?tgl="+dt,
+               ajax: "{{ route('laporan.data') }}?bulan="+dt,
                columns: [
                    {
                        data: "DT_RowIndex"
@@ -120,6 +147,10 @@
    function modal(id){
     $('input[name=id_kode]').val(id);
     $('#exampleModal').modal('show');
+   }
+
+   function cetak(){
+    window.print();
    }
 </script>
 
