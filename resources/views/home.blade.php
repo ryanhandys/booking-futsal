@@ -10,29 +10,29 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="d-flex">
-            <img src="{{ asset('img/lap1.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
+            <img src="{{ asset('img/lap-1.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
             <div class="px-4">
 
             </div>
-            <img src="{{ asset('img/lap2.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
+            <img src="{{ asset('img/lap-2.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
         </div>
       </div>
       <div class="carousel-item">
         <div class="d-flex">
-            <img src="{{ asset('img/lap3.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
+            <img src="{{ asset('img/lap-3.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
             <div class="px-4">
 
             </div>
-            <img src="{{ asset('img/lap4.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
+            <img src="{{ asset('img/lap-4.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
         </div>
       </div>
       <div class="carousel-item">
         <div class="d-flex">
-            <img src="{{ asset('img/lap5.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
+            <img src="{{ asset('img/lap-5.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
             <div class="px-4">
 
             </div>
-            <img src="{{ asset('img/lap6.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
+            <img src="{{ asset('img/lap-6.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
         </div>
       </div>
     </div>
