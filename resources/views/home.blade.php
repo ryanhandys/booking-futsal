@@ -28,11 +28,11 @@
       </div>
       <div class="carousel-item">
         <div class="d-flex">
-            <img src="{{ asset('img/lap5.png') }}" class="d-block w-100" alt="..." style="height: 300px">
+            <img src="{{ asset('img/lap5.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
             <div class="px-4">
 
             </div>
-            <img src="{{ asset('img/lap6.jpeg') }}" class="d-block w-100" alt="..." style="height: 300px">
+            <img src="{{ asset('img/lap6.jpg') }}" class="d-block w-100" alt="..." style="height: 300px">
         </div>
       </div>
     </div>
