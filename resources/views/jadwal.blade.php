@@ -20,7 +20,7 @@ data-client-key="{{ env('MIDTRANS_CLIENT_KEY') }}"></script>
             <input type="date" name="tgl" id="tgl" required>
         </div>
         <div>
-            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="submit" class="btn btn-primary" style="width: 150px">Simpan</button>
         </div>
     </div>
     

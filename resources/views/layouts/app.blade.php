@@ -38,7 +38,7 @@
           <div class="w-50 d-flex justify-content-end">
             @auth
             <div class="px-4 pt-4">
-              <h1 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">Selamat Datang</h1>
+              <h2 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">Selamat Datang</h2>
               <h1 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">{{ auth()->user()->nama }}</h1>
             </div>
             @endauth

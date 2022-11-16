@@ -5,11 +5,13 @@
 @endsection
 @section('content')
 <section class="container">
-    <h1>Riwayat Pembayaran</h1>
+  <div style="color: white">
+    <h2>Riwayat Pembayaran</h2>
+  </div>
       <div class="row">
         @if (isset($transaksi))
         @foreach ($transaksi as $item)            
-        <article class="col-5 m-2" style="background-color: rgb(236, 240, 3)" >
+        <article class="col-5 m-2" style="background-color: rgba(236, 241, 241, 0.74)" >
           <section class="date">
             <time>
               <span>{{ Carbon\Carbon::parse($item->pemesanan->tanggal)->format('d') }}</span><span>{{ Carbon\Carbon::parse($item->pemesanan->tanggal)->format('M') }}</span>
