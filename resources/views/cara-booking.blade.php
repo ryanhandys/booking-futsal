@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="px-3">
+<div class="px-3" style="color: white">
 <h1>
     Cara Booking
 </h1>

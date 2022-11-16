@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="px-3">
+<div class="px-3" style="color: whitesmoke">
     <h1>Bejo Futsal</h1>
 
     <p>Bejo Futsal memberikan kemudahan bagi anda dalam melakukan pemesanan lapangan futsal secara online,

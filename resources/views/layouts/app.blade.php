@@ -13,7 +13,7 @@
     <title>Bejo Futsal</title>
     <style>
         body {
-            background-color: #1FC58E
+            background-image: url("{{asset('img/bgrn.jpg')}}")
         }
         .opened {
           background-color: rgb(34, 34, 34);
@@ -27,25 +27,24 @@
 </head>
 <body>
   
-    <div class="py-5">
+    <div>
       <div class="w-100 d-flex px-4">
-        <div class="w-50 d-flex">
-            <img src="{{ asset('img/logo.png') }}" class="rounded-circle" alt="..." style="height: 100px; width: 100px">
+        <div class="w-50 d-flex align-items-center">
+            <img src="{{ asset('img/logo2.png') }}" class="rounded-circle" alt="..." style="height: 100px; width: 100px">
             <div class="px-4">
-              <h1 class="display-5 text-white fw-bold">Wellcome To..</h1>
-              <h1 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">Bejo Futsal</h1>
+              <img src="{{asset('img/bgsmpg2.png')}}" alt="" class="pt-3" style="height:140px">
             </div>
           </div>
           <div class="w-50 d-flex justify-content-end">
             @auth
-            <div class="px-4">
-              <h1 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">Hai Selamat Datang</h1>
+            <div class="px-4 pt-4">
+              <h1 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">Selamat Datang</h1>
               <h1 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">{{ auth()->user()->nama }}</h1>
             </div>
             @endauth
         </div>
       </div>
-        <div class="card mt-3">
+        <div class="card mt-3 " style="background-color:rgba(250, 244, 244, 0.096)">
             <div class="card-body">
                 
                 @include('partials.navbar')
@@ -55,14 +54,15 @@
         </div>
     </div>
 
-    <footer class="py-3 my-4 bg-black">
+    <footer class="py-3 my-4" style="background-color:rgba(6, 17, 48, 0.466); background-image: url('{{ asset("img/fut2.png") }}');
+    background-repeat: repeat-x">
       <center>
-        <div>
+        <div class="" style="color: white">
           <p class="fw-semibold">Plaosan RT02/19 Tlogoadi Mlati Sleman Yogyakarta.</p>
           <p class="fw-semibold">0815-4835-8353 @ bejosportt</p>
         </div>
       </center>
-      <p class="text-center text-muted">© 2022 Ryan Handysandoko</p>
+      <p class="text-center" style="color: white">© 2022 Ryan Handysandoko</p>
     </footer>
     <div class="container">
     </div>

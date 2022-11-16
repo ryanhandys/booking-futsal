@@ -33,7 +33,7 @@
         @else            
         <ul class="navbar-nav fw-bold">
             <li class="nav-item px-4">
-                <a class="nav-link btn btn-success rounded-pill{{ (Request::is('login')) ? 'opened rounded-pill px-5' : ''}} text-white" href="{{ route('login') }}">MASUK</a>
+                <a class="nav-link btn rounded-pill{{ (Request::is('login')) ? 'opened rounded-pill px-5' : ''}} text-white" href="{{ route('login') }}" style="background-color: rgb(11, 11, 58)">MASUK</a>
             </li>
         </ul>
         @endauth

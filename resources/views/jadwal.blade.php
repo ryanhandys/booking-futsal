@@ -25,7 +25,7 @@ data-client-key="{{ env('MIDTRANS_CLIENT_KEY') }}"></script>
     </div>
     
     <div class="px-5" id="viewTable">
-        <table class="table table-striped w-100" id="jadwal">
+        <table class="table table-striped w-100 text-white" id="jadwal">
             <thead>
                 <tr>
                     <th>
@@ -66,7 +66,7 @@ data-client-key="{{ env('MIDTRANS_CLIENT_KEY') }}"></script>
 
         function dataTables(dt = 'null'){
             $('#viewTable').html(``);
-            $(`#viewTable`).html(`<table class="table table-striped w-100" id="jadwal">
+            $(`#viewTable`).html(`<table class="table w-100 text-white" id="jadwal">
                 <thead>
                     <tr>
                         <th>
