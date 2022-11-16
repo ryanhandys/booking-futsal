@@ -30,9 +30,7 @@
     <div>
       <div class="w-100 d-flex px-4">
         <div class="w-50 d-flex align-items-center">
-            <img src="{{ asset('img/logo2.png') }}" class="rounded-circle" alt="..." style="height: 100px; width: 100px">
-            <div class="px-4">
-              <img src="{{asset('img/bgsmpg2.png')}}" alt="" class="pt-3" style="height:140px">
+              <img src="{{asset('img/bgsmpg2.png')}}" alt="" class="pt-3" style="height:160px">
             </div>
           </div>
           <div class="w-50 d-flex justify-content-end">
