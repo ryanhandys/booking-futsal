@@ -26,7 +26,7 @@
             <li class="nav-item px-4">
                 <form action="{{ route('logout') }}" method="post">
                     @csrf
-                    <button class="nav-link btn btn-success " type="submit"style="background-color:white">KELUAR</button>
+                    <button class="nav-link px-5 btn text-white " type="submit"style="background-color: rgb(20, 65, 102) ">KELUAR</button>
                 </form>
             </li>
         </ul>

@@ -28,18 +28,17 @@
 <body>
   
     <div>
-      <div class="w-100 d-flex px-4">
-        <div class="w-50 d-flex align-items-center">
-              <img src="{{asset('img/bgsmpg2.png')}}" alt="" class="pt-3" style="height:160px">
-            </div>
-          </div>
-          <div class="w-50 d-flex justify-content-end">
-            @auth
+      <div class="row px-4">
+        <div class="col-6">
+          <img src="{{asset('img/bgsmpg2.png')}}" alt="" class="pt-3" style="height:160px">
+        </div>
+        <div class="col-6 d-flex align-items-center justify-content-end">
+          @auth
             <div class="px-4 pt-4">
-              <h2 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">Selamat Datang</h2>
+              <h1 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">Selamat Datang</h1>
               <h1 class="display-7 text-white fw-light fst-italic" style="margin-top: -1rem;">{{ auth()->user()->nama }}</h1>
             </div>
-            @endauth
+          @endauth
         </div>
       </div>
         <div class="card mt-3 " style="background-color:rgba(250, 244, 244, 0.096)">
