@@ -46,7 +46,13 @@
             Rp{{ number_format($item->biaya, 0, 0, '.') }}
           </p>
         </div>
-        <P>{{ $item->status_transaksi }}</P>
+        <P>
+          @if ($item->status_transaksi == 'settlement')
+              Dibayar
+          @else
+              Belum Bayar
+          @endif
+        </P>
       </section>
     </article>
     @endforeach
