@@ -72,7 +72,7 @@ class PesananController extends Controller
         $transaksi->bank = isset($json->va_numbers[0]->bank) ?? '';
         $transaksi->nomor_va = isset($json->va_numbers[0]->va_number) ?? '';
         $transaksi->fraud_status = $json->fraud_status;
-        $transaksi->pdf_url = $json->pdf_url;
+        $transaksi->pdf_url = $json->pdf_url ?? '';
         $transaksi->status_pembayaran = $json->transaction_status;
         $transaksi->transaction_id = $json->transaction_id;
         $transaksi->pemesanan_id = $json->order_id;
